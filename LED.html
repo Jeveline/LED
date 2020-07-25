@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <link rel="stylesheet" type="text/css" href="./led.css">
+        <section class="connect">
+            <label for="online" class="on-con">Połączenie z lampą</label>
+            <div id="online"></div>
+        </section>
+        <h1>Lampa LED</h1>
+        <form>
+            <div>
+                <label for="time-of-dawn">Godzina świtu:</label>
+                <input id="time-of-dawn" type="time" name="dawn">
+            </div>
+            <div>
+                <label for="dawn-length">Długość świtu (w minutach):</label>
+                <input id="dawn-length" type="number" name="length" min="0" max="60">
+            </div>
+            <div>
+            <label for="power">Moc lampy (%)</label>
+            <input id="power" type="range" min="0" max="100" step="10" list="percent">
+            <datalist id="percent">
+                <option value="0"></option>
+                <option value="10"></option>
+                <option value="20"></option>
+                <option value="30"></option>
+                <option value="40"></option>
+                <option value="50"></option>
+                <option value="60"></option>
+                <option value="70"></option>
+                <option value="80"></option>
+                <option value="90"></option>
+                <option value="100"></option>
+            </datalist>
+            </div>
+            <div>
+                <label for="time-of-dusk">Godzina zmierzchu:</label>
+                <input id="time-of-dusk" type="time" name="dusk">
+            </div>
+            <div>
+                <label for="dusk-length">Długość zmierzchu (w minutach):</label>
+                <input id="dusk-length" type="number" name="dlength" min="0" max="60">
+            <div>
+            <input type="submit" value="Wyślij do lampy" class="submit">
+        </form>
+    </body>
+</html>
